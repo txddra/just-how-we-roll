@@ -30,11 +30,25 @@ const sortByNumber = function(arr) {
   return arr.slice().sort(byNumber);
 }
 
-resultD6 = document.querySelector('#d6-roll')
-resultDD6 = document.querySelector('#double-d6-roll-1')
-resultDD6Jr = document.querySelector('#double-d6-roll-2')
-resultD12 = document.querySelector('#d12-roll')
-resultD20 = document.querySelector('#d20-roll')
+const resultD6 = document.querySelector('#d6-roll')
+const resultDD6 = document.querySelector('#double-d6-roll-1')
+const resultDD6Jr = document.querySelector('#double-d6-roll-2')
+const resultD12 = document.querySelector('#d12-roll')
+const resultD20 = document.querySelector('#d20-roll')
+
+
+
+const meanForTwoDie = document.querySelector('#doubled-d6-rolls-mean')
+
+const meanForD12 =document.querySelector('#d12-rolls-mean')
+
+const meanForD20 = document.querySelector('d20-rolls-mean')
+
+function mean(num1, num2, num3){
+  num1 + num2 / num3
+  }
+  
+
 /******************
  * BUTTON QUERIES *
  ******************/
@@ -55,6 +69,12 @@ const oneOfDice = function(){
   let oneOf = getRandomNumber(6)
   sixes.push(oneOf)
   resultDD6.src = 'images/d6/'+oneOf+'.png'
+  //const meanForD6 = document.querySelector('#d6-rolls-mean')
+
+  function meanForD6(num1, num2, num3){
+    sixes.push(num1 + num2 / num3)
+    }
+    
 }
 
 const twoOfDice = function(){
@@ -93,12 +113,7 @@ resultD20.addEventListener('click', twentyClick)
  * MATH SECTION *
  ****************/
 
-function mean(){
-  
-}
 
 /********************
 * MATH-AREA QUERIES *
 ********************/
-
-
